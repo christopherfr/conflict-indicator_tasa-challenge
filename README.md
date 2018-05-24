@@ -1,4 +1,4 @@
-# Conflict indicator
+# Conflict indicator (Indicador de Conflictos)
 This is my solution to one of the questions of the TASA Challenge pre-selection stage. The translated question is the following:
 > Today is the annual Data Science conference and will be attended by 8 exhibitors from different software brands. The past few times that the conference has been organized there has been a lot of tension between speakers, discussions and all kinds of conflicts. This year, it has been determined that an algorithm will be used to locate exhibitors in order to reduce conflicts. To do this, the information from past conferences was digitized, a conflict indicator (CI) was determined based on the frequency and severity of discussions between exhibitors, and everything was compiled into the file within the 'Data' folder called 'exhibitors.txt' The task is to determine the optimal location of the exhibitors, assuming they will be seated at a round table, as well as the minimized value of the total CI (the sum of all the CIs).
 
