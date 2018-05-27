@@ -103,12 +103,15 @@ def crossover(father,mother):
         for node_adjacents in unique_am[node]:
             if len(unique_am[node_adjacents]) == min_length:
                 min_adjacents.append(node_adjacents)
+        # Delete all elements of the adjacency list
+        unique_am[node] = []
         # Select one of the node_adjacents lists with minimum length
         if len(min_adjacents) > 0:
             node = min_adjacents[random.randint(0,len(min_adjacents)-1)]
         else:
-            # This should always return the last node pending to be added to child
-            node = unique_am[node][0]
+            for nodes_list in unique_am:
+                if len(nodes_list) > 0:
+                    node = nodes_list[0]
         child = np.append(child,node)
     return child
 
@@ -138,8 +141,8 @@ def create_initial_population(POPULATION):
     return pop
 
 def main():
-    POPULATION = 50
-    MAX_ITER = 15
+    POPULATION = 100
+    MAX_ITER = 10
     MUTATION_PROB = 0.1
 
     global df
