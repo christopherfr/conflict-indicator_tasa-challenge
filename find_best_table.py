@@ -61,7 +61,6 @@ def ci_from_a_to_b(a_speaker,b_speaker):
     # Match both boolean arrays in the DataFrame and get the CI
     return df_ab['ci'].iloc[0]
 
-
 def adjacency_matrix(table):
     lefts = np.array([], dtype=np.uint8)
     rights = np.array([], dtype=np.uint8)
@@ -113,6 +112,7 @@ def crossover(father,mother):
                 if len(nodes_list) > 0:
                     node = nodes_list[0]
         child = np.append(child,node)
+
     return child
 
 def mutate(table):
@@ -142,7 +142,7 @@ def create_initial_population(POPULATION):
 
 def main():
     POPULATION = 100
-    MAX_ITER = 10
+    MAX_ITER = 15
     MUTATION_PROB = 0.1
 
     global df
