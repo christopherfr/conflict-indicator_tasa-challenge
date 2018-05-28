@@ -6,7 +6,7 @@ def get_features():
     # Read the data
     df = pd.read_csv('Data/speakers.txt', header = None)
     # Set the regex pattern
-    pattern = "(.+)'s CI (.+) in (\d+) when sitting next to (.+)\."
+    pattern = r"(.+)'s CI (.+) in (\d+) when sitting next to (.+)\."
     # Initialize the DataFrame
     df_features = pd.DataFrame({'a':[], 'b':[], 'ci':[]})
     # Extract the features row by row
